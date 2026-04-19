@@ -1,12 +1,11 @@
 window.addEventListener("load", () => {
-  // ─── Utility: safe querySelector with warning ───────────────────────
   function getEl(selector, context = document) {
     const el = context.querySelector(selector);
     if (!el) console.warn(`[UI] Element not found: "${selector}"`);
     return el;
   }
 
-  // ─── Announcement Bar ───────────────────────────────────────────────
+  // announcement bar
   const announcementBar = getEl(".announcement-bar");
   const closeBtn = getEl(".cross");
 
@@ -16,8 +15,7 @@ window.addEventListener("load", () => {
       announcementBar.style.display = "none";
     });
   }
-
-  // ─── Nav Toggle ─────────────────────────────────────────────────────
+// togglee button
   const navToggle = getEl(".nav_toggle");
   const nav = getEl(".nav");
 
@@ -25,14 +23,11 @@ window.addEventListener("load", () => {
     navToggle.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("is-open");
 
-      // Keep aria-expanded on the BUTTON (correct pattern for toggles)
       navToggle.setAttribute("aria-expanded", String(isOpen));
 
-      // Also sync the nav's own aria state
       nav.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close nav on resize back to desktop
     window.addEventListener("resize", () => {
       if (window.innerWidth > 767) {
         nav.classList.remove("is-open");
@@ -42,7 +37,7 @@ window.addEventListener("load", () => {
     });
   }
 
-  // HERO SLIDER
+  // Hero slides
   function initHeroSlider() {
     var slider = document.querySelector(".hero_slider");
     var track = document.querySelector(".hero_track");
@@ -126,7 +121,6 @@ window.addEventListener("load", () => {
       var max = totalPages() - 1;
       currentPage = Math.max(0, Math.min(page, max));
 
-      // Measure one item's full width including margin
       var item = items[0];
       var cs = window.getComputedStyle(item);
       var itemW =

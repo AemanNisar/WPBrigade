@@ -148,7 +148,7 @@
   /* ARTICLES */
   .articles {
     flex-direction: column;
-    /* border: 2px solid yellow; */
+    
   }
   .article {
     width: 100%;
@@ -157,7 +157,7 @@
     text-align: 14px;
   }
   .gallery_main_container {
-    /* border: 15px solid rgb(104, 0, 62); */
+    
     padding: 30px;
   }
 

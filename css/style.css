@@ -129,7 +129,6 @@ header {
 }
 .nav_item {
   padding: 10px 20px;
-  /* margin-bottom: 5px; */
   margin: 3px 0px;
 }
 .nav_item:hover {
@@ -573,14 +572,12 @@ header {
   color: white;
   background-color: var(--clr-nav);
   justify-content: center;
-  /* border: 2px solid rgb(18, 207, 191); */
 }
 .contact-div {
   display: grid;
   gap: 10px;
   width: 540px;
   grid-template-columns: repeat(2, 1fr);
-  /* border: 2px solid red */
 }
 .contact-form {
   display: flex;
@@ -631,9 +628,7 @@ header {
   height: auto;
   padding: 0;
 }
-/* .one-col-span{
-  grid-column: span 1
-} */
+
 
 .input-group textarea {
   width: 100%;
