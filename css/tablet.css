@@ -1,0 +1,19 @@
+@media (768px <= width <= 1024px) {
+  .gallery_item {
+    flex: 0 0 32%;
+  }
+  /* 3 gallery item each time, there are total 12.. which means there will be three shifts */
+  /* .gallery_slider_dots > :nth-last-child(-n + 7) {
+    display: none;
+    border: 8px solid purple
+  } */
+
+.articles{
+    flex-wrap: wrap;
+    justify-content: flex-start
+}
+.article{
+   width:45%
+}
+
+}

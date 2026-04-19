@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adidas</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="main.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+AU+NSW:wght@100..400&family=Playwrite+AU+QLD:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <span class="announcement-bar">
@@ -16,23 +27,30 @@
         <img src="Images/x-mark.png" alt="cross" aria-hidden="true" />
       </button>
     </span>
+
     <header class="header">
       <div class="header_top">
         <div class="container">
-          <a href="#" class="header_logo" aria-label="Adidas Home">
-            <img src="Images/logo.png" alt="Adidas" />
-          </a>
+          <div class="logo_toggle">
+            <a href="#" class="header_logo" aria-label="Adidas Home">
+              <img src="Images/logo.png" alt="Adidas" />
+            </a>
+            <!-- TOGGLE BUTTON ON MOBILES  -->
+            <button class="nav_toggle" aria-label="Toggle Navigation">
+              <img src="Images/burger-icon.png" alt="Toggle Navigation" />
+            </button>
+          </div>
+
           <div class="header_actions">
-            <a href="#" class="btn_ghost"> Membership </a>
-            <a href="#" class="btn_ghost"> Account</a>
+            <a href="#" class="btn_ghost">Membership</a>
+            <a href="#" class="btn_ghost">Account</a>
           </div>
         </div>
       </div>
     </header>
-    <nav class="nav" aria-label="NAVIGATION">
-      <div class="container">
-        <!-- place mobile burger later -->
 
+    <nav class="nav is-hidden-on-mobile" aria-label="NAVIGATION">
+      <div class="container">
         <ul class="nav_list">
           <li class="nav_item">Our Tracks</li>
           <li class="nav_item">Find Events</li>
@@ -40,7 +58,6 @@
           <li class="nav_item">Shop</li>
           <li class="nav_item">About us</li>
         </ul>
-
         <div class="nav_search">
           <input type="search" placeholder="Search" />
           <button class="nav_search-btn">
@@ -52,7 +69,7 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-      <div class="hero_banner">
+      <div class="hero_banner is-hidden-on-mobile">
         <div class="container">
           <div class="hero_banner_section">
             <h1>HOME PAGE</h1>
@@ -71,8 +88,32 @@
       <!-- HERO SLIDER -->
       <div class="hero_slider" aria-label="Featured content">
         <div class="hero_track">
-          <!-- first slide -->
           <div class="hero_slide" aria-label="Slide 1">
+            <img src="Images/hero-bg.png" class="hero_slide-bg" alt="" />
+            <div class="hero_slide-text">
+              <h1>
+                GET READY FOR NEW <br class="is-hidden-on-mobile" />ADIDAS BANDS
+              </h1>
+              <p>
+                Adidas tracks all begin with a starting gate and end with <br />
+                a finish line, but everything in between varies from track
+                <br />
+                to track. Because no two tracks are alike, this action <br />
+                sport keeps you on your toes wherever you are racing.
+              </p>
+            </div>
+            <div class="hero_slide-media">
+              <img
+                class="hero_slide-media-shoes"
+                src="Images/video-thumbnail-img.png"
+                alt="adidas shoes"
+              />
+              <button class="hero_play-btn">
+                <img src="Images/play-icon.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="hero_slide" aria-label="Slide 2">
             <img src="Images/hero-bg.png" class="hero_slide-bg" alt="" />
             <div class="hero_slide-text">
               <h1>GET READY FOR NEW <br />ADIDAS BANDS</h1>
@@ -84,16 +125,14 @@
                 sport keeps you on your toes wherever you are racing.
               </p>
             </div>
-            <div class="hero_slide-media">
+            <div class="hero_slide-media-shoes" class="hero_slide-media">
               <img src="Images/video-thumbnail-img.png" alt="adidas shoes" />
               <button class="hero_play-btn">
                 <img src="Images/play-icon.png" alt="" />
               </button>
             </div>
           </div>
-
-          <!--Supposing Second slide  to be -->
-          <div class="hero_slide" aria-label="Slide 1">
+          <div class="hero_slide" aria-label="Slide 3">
             <img src="Images/hero-bg.png" class="hero_slide-bg" alt="" />
             <div class="hero_slide-text">
               <h1>GET READY FOR NEW <br />ADIDAS BANDS</h1>
@@ -105,59 +144,338 @@
                 sport keeps you on your toes wherever you are racing.
               </p>
             </div>
-            <div class="hero_slide-media">
-              <img src="Images/video-thumbnail-img.png" alt="adidas shoes" />
+            <div class="hero_slide-media is-hidden-on-mobile">
+              <img
+                class="hero_slide-media-shoes"
+                src="Images/video-thumbnail-img.png"
+                alt="adidas shoes"
+              />
               <button class="hero_play-btn">
                 <img src="Images/play-icon.png" alt="" />
               </button>
             </div>
           </div>
-          <!-- Third slide -->
-
-          <div class="hero_slide" aria-label="Slide 1">
-            <img src="Images/hero-bg.png" class="hero_slide-bg" alt="" />
-            <div class="hero_slide-text">
-              <h1>GET READY FOR NEW <br />ADIDAS BANDS</h1>
-              <p>
-                Adidas tracks all begin with a starting gate and end with <br />
-                a finish line, but everything in between varies from track
-                <br />
-                to track. Because no two tracks are alike, this action <br />
-                sport keeps you on your toes wherever you are racing.
-              </p>
-            </div>
-            <div class="hero_slide-media">
-              <img src="Images/video-thumbnail-img.png" alt="adidas shoes" />
-              <button class="hero_play-btn">
-                <img src="Images/play-icon.png" alt="" />
-              </button>
-            </div>
-          </div>
-
- 
-
         </div>
 
-        <!-- PREVIUOS AND NEXT BUTTONS -->
-        <button class="hero_arrow hero_arrow-prev" aria-label="Previous Slide">
+        <button
+          class="hero_arrow is-hidden-on-mobile hero_arrow-prev"
+          aria-label="Previous Slide"
+        >
           <img
             src="Images/hero-slider-leftt-arrow.png"
             alt="Left slider arrow"
           />
         </button>
-        <button class="hero_arrow hero_arrow-next" aria-label="Previous Slide">
+        <button
+          class="hero_arrow is-hidden-on-mobile hero_arrow-next"
+          aria-label="Next Slide"
+        >
           <img
+            class="is-hidden-on-mobile"
             src="Images/hero-slider-right-arrow.png"
             alt="Right slider arrow"
           />
         </button>
-       <!--  INDICATORS -->
         <div class="slider_dots" aria-label="Slide Indicators">
-          <button class="slider_dot"></button
-          ><button class="slider_dot"></button
-          ><button class="slider_dot"></button>
+          <button class="slider_dot"></button>
+          <button class="slider_dot"></button>
+          <button class="slider_dot"></button>
         </div>
       </div>
     </section>
+
+    <!-- GALLERY AND EVENTS -->
+    <section class="gallery_section" aria-label="Gallery and Events">
+      <div class="container">
+        <!-- LEFT COLUMN -->
+        <div class="gallery_main_container">
+          <div class="gallery_layout">
+            <button
+              class="gallery_arrow gallery_arrow-prev is-hidden-on-mobile"
+              aria-label="Previous"
+            >
+              <img
+                src="Images/hero-slider-leftt-arrow.png"
+                alt="Left slider arrow"
+              />
+            </button>
+            <div class="gallery_track">
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+              <div class="gallery_item">
+                <img src="Images/thubnail-slider-img.png" alt="" />
+              </div>
+            </div>
+            <button
+              class="gallery_arrow gallery_arrow-next is-hidden-on-mobile"
+              aria-label="Next"
+            >
+              <img
+                src="Images/hero-slider-right-arrow.png"
+                alt="Right slider arrow"
+              />
+            </button>
+          </div>
+          <div class="gallery_slider_dots" aria-label="Slide Indicators">
+            <button class="gallery_slider_dot"></button>
+            <button class="gallery_slider_dot"></button>
+            <button class="gallery_slider_dot"></button>
+            <button
+              class="gallery_slider_dot is-hidden is-hidden-on-tablet"
+            ></button>
+            <button class="gallery_slider_dot is-hidden"></button>
+            <button class="gallery_slider_dot is-hidden"></button>
+            <button class="gallery_slider_dot is-hidden"></button>
+            <button class="gallery_slider_dot is-hidden"></button>
+            <button class="gallery_slider_dot is-hidden"></button>
+            <button class="gallery_slider_dot is-hidden"></button>
+            <button class="gallery_slider_dot is-hidden"></button>
+            <button class="gallery_slider_dot is-hidden"></button>
+          </div>
+          <hr />
+          <!-- ARTICLES -->
+          <div class="articles">
+            <div class="article">
+              <img src="Images/post-img.png" alt="" />
+              <div class="article_detail">
+                <h3>2019 NATIONAL CHAMPIONS CROWNED AT Reebok</h3>
+                <p>
+                  Membership has its perks. Joining ADIDAS means you can race at
+                  your local tracks
+                </p>
+              </div>
+              <div class="article_link"><a href="#">Read more</a></div>
+            </div>
+            <div class="article">
+              <img src="Images/post-img.png" alt="" />
+              <div class="article_detail">
+                <h3>2019 NATIONAL CHAMPIONS</h3>
+                <p>Membership has its perks.</p>
+              </div>
+              <div class="article_link"><a href="#">Read more</a></div>
+            </div>
+            <div class="article">
+              <img src="Images/post-img.png" alt="" />
+              <div class="article_detail">
+                <h3>2019 NATIONAL CHAMPIONS CROWNED AT Reebok</h3>
+                <p>
+                  Membership has its perks. Joining ADIDAS means you can race at
+                  your local tracks
+                </p>
+              </div>
+              <div class="article_link"><a href="#">Read more</a></div>
+            </div>
+          </div>
+
+          <!-- THE ZIGZAAG SECTION -->
+          <div class="zigzag-1">
+            <div class="zigzag-img">
+              <img src="Images/zig-zag-img-1.png" alt="" />
+            </div>
+            <div class="zigzag-text-1">
+              <h2>2019 NATIONAL CHAMPIONS CROWNED AT Reebok</h2>
+              <p>
+                Membership has its perks. Joining <br />
+                ADIDAS means you can race at your <br />
+                local tracks
+              </p>
+            </div>
+          </div>
+          <!-- 2nd zigzag -->
+          <div class="zigzag-2">
+            <div class="zigzag-text-2">
+              <h2>2019 NATIONAL CHAMPIONS CROWNED AT Reebok</h2>
+              <p>
+                Membership has its perks. Joining <br />
+                ADIDAS means you can race at your <br />
+                local tracks
+              </p>
+            </div>
+            <div class="zigzag-img-2">
+              <img src="Images/zig-zag-img-2.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="events_column">
+          <h3 class="event_heading">EVENTS</h3>
+          <ul class="event_list">
+            <li>
+              <span class="event_number">1</span>
+              <div class="event_info">
+                <p class="event_name">adidas show in usa</p>
+                <p class="event_location">USA</p>
+              </div>
+            </li>
+            <li>
+              <span class="event_number">2</span>
+              <div class="event_info">
+                <p class="event_name">adidas show in usa</p>
+                <p class="event_location">USA</p>
+              </div>
+            </li>
+            <li>
+              <span class="event_number">3</span>
+              <div class="event_info">
+                <p class="event_name">adidas show in usa</p>
+                <p class="event_location">USA</p>
+              </div>
+            </li>
+            <li>
+              <span class="event_number">4</span>
+              <div class="event_info">
+                <p class="event_name">adidas show in usa</p>
+                <p class="event_location">USA</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="contact_section" aria-label="Contact Us">
+      <h2>GET IN TOUCH WITH US</h2>
+      <form class="contact-form">
+        <div class="contact-div">
+          <div class="input-group">
+            <label for="name" class="contact-label"> Name </label>
+            <input
+              type=" text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="input-group">
+            <label for="email" class="contact-label"> Email </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="input-group">
+            <label class="contact-label" for="country">Country</label>
+            <select
+              name="country"
+              id="country"
+              aria-label="Select your country"
+            >
+              <option value="" disabled selected>Select your country</option>
+              <option value="usa">USA</option>
+              <option value="china">China</option>
+              <option value="iran">Iran</option>
+              <option value="canada">Canada</option>
+              <option value="pakistan">Pakistan</option>
+              <option value="india">India</option>
+              <option value="afghanistan">Afghanistan</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="contact-label" for="state">State</label>
+            <select name="state" id="state" aria-label="Select your state">
+              <option value="" disabled selected>Select your state</option>
+              <option value="california">California</option>
+              <option value="texas">Texas</option>
+              <option value="florida">Florida</option>
+            </select>
+          </div>
+          <div class="input-group full-span">
+            <label class="contact-label" for="gender">Gender</label>
+            <div class="radio-elements">
+              <label for="male">
+                <input type="radio" id="male" name="gender" value="male" />
+                Male
+              </label>
+              <label class="contact-label" for="female">
+                <input type="radio" id="female" name="gender" value="female" />
+                Female
+              </label>
+              <label class="contact-label" for="other">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="other"
+                  id="other"
+                />Other
+              </label>
+            </div>
+          </div>
+          <div class="input-group full-span">
+            <label class="contact-label" for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="5"
+              placeholder="Message"
+            ></textarea>
+          </div>
+        </div>
+        <button type="submit" class="input-group">Submit</button>
+      </form>
+    </section>
+    <footer>
+      <div class="footer-links">
+        <ul class="footer-list">
+          <li><a href="#">Our tracks /</a></li>
+          <li><a href="#">find events /</a></li>
+          <li><a href="#">track maps /</a></li>
+          <li><a href="#">shop /</a></li>
+          <li><a href="#">about us</a></li>
+        </ul>
+      </div>
+      <div class="footer-social-media">
+        <ul class="footer-list">
+          <li>
+            <a href="#"><img src="Images/facebook-icon.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="Images/twitter-icon.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="Images/instagram-icon.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="Images/twitter-icon.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyrights">&copy; copyright 2020 Adidas</div>
+    </footer>
   </body>
 </html>
