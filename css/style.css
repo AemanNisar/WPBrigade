@@ -1,16 +1,22 @@
 body {
-  font-family:"Oswald";
+  font-family: "Oswald";
   /* background: var(--clr-header); */
   overflow-x: hidden;
   max-width: var(--max-lg-width);
   gap: 0px;
   min-width: 400px;
-  
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+h2 {
+  font-size: 20px;
+}
+p{
+  font-size: 14px
 }
 body::before {
   content: "";
@@ -33,28 +39,27 @@ a {
   --max-lg-width: 1440px;
   --clr-btn-ghost: #1a613d;
 }
-.is-hidden{
-  display: none
+.is-hidden {
+  display: none;
 }
 .announcement-bar {
   display: flex;
   text-align: center;
   font-size: 14px;
   background: transparent;
-  font-family:roboto;
-  padding: 10px
+  font-family: roboto;
+  padding: 10px;
 }
-.announcement-bar p{
-  flex:0 0 80%;
+.announcement-bar p {
+  flex: 0 0 80%;
 }
 .announcement-bar a {
   text-decoration: underline;
   cursor: pointer;
   color: var(--clr-primary);
 }
-.announcement-bar .cross {
+.cross {
   background-color: var(--clr-primary);
-  /* position: absolute; */
   right: 20px;
   top: 10%;
   width: 25px;
@@ -98,14 +103,14 @@ header {
   background-color: var(--clr-home);
 }
 /* TOGGLE BUTTON HIDDEN ON DESKTOP */
-.nav_toggle{
-  display:none;
+.nav_toggle {
+  display: none;
   background: transparent;
 }
 /* NAVBAR */
 .nav {
   background-color: var(--clr-nav);
-  font-family: 'Source Sans 3'
+  font-family: "Source Sans 3";
 }
 .nav .container {
   display: flex;
@@ -155,9 +160,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  /* border: 2px solid red; */
   padding: 0;
-  /* height: 100px; */
   background-color: var(--clr-home);
   gap: 0;
 }
@@ -165,14 +168,12 @@ header {
   padding: 30px 120px;
   margin: 0;
   color: white;
-  /* border: 2px solid orange; */
 }
 .hero_banner_section:first-of-type {
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
 }
 .hero_partnership {
-  /* border: 2px solid blue; */
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
   text-transform: uppercase;
   width: 60%;
@@ -192,22 +193,23 @@ header {
 /* HERO SLIDER */
 .hero_track {
   position: relative;
-  overflow: hidden;
   display: flex;
   transition: transform 0.5s ease-in-out;
   margin-bottom: 0px;
 }
-.hero_track::before {
+.hero_slide::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: #1a5c3caf;
+  z-index: -1;
 }
 .hero_slider {
   margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
 }
-/* .hero {
-} */
+
 .hero_slide {
   position: relative;
   min-width: 100%;
@@ -241,10 +243,10 @@ header {
   left: 60%;
   cursor: pointer;
 }
-.hero_slide-text p{
-   font-family: Roboto;
-   font-size: 18px
-  }
+.hero_slide-text p {
+  font-family: Roboto;
+  font-size: 18px;
+}
 /* HERO ARROWS */
 .hero_arrow {
   position: absolute;
@@ -279,7 +281,7 @@ header {
 .slider_dot {
   width: 20px;
   height: 5px;
-  background: white;
+  background: #656565;
   border: none;
   cursor: pointer;
   z-index: 120;
@@ -309,22 +311,26 @@ header {
   opacity: 100;
 }
 .gallery_layout {
-  width: 90%;
-  margin: auto;
+  width: 100%;
   display: flex;
+  align-items: center;
   position: relative;
+  overflow: hidden;
+}
+.gallery_arrow {
+  cursor: pointer;
+  z-index: 100;
 }
 .gallery_track {
   display: flex;
-  overflow: hidden;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
+
 .gallery_item {
-  flex: 0 0 24%;
-  box-sizing: border-box;
+  flex: 0 0 calc(25% - 2px);
   padding: 4px;
-  height: 160px;
-  margin: 4px;
+  margin: 3px;
   display: flex;
   justify-content: center;
   align-items: center;

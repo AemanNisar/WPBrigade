@@ -7,7 +7,9 @@
     display: none;
     border: 8px solid purple
   } */
-
+.gallery_item{
+  margin: 6px;
+}
 .articles{
     flex-wrap: wrap;
     justify-content: flex-start
