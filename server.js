@@ -1,14 +1,15 @@
 import express from "express";
 import statesRoute from "./routes/states.js"
+import contactRoute from "./routes/contact.js";
 const app=express()
-const PORT=process.env.PORT || 0;
+const PORT=process.env.PORT ||3000;
 
 app.use(express.json());
 app.use(express.static(
     "public"
 ));
 app.use("/states",statesRoute);
-
+app.use("/contact", contactRoute);
 app.use((err,req,res,next)=>{
     res.status(500).json({
         success:false,

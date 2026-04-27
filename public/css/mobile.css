@@ -1,0 +1,137 @@
+@media (max-width: 767px) {
+  /* 
+     Hero (mobile)
+      */
+
+  .hero-slider__arrow {
+    display: none;
+  }
+
+  .hero-slider {
+    min-height: auto;
+  }
+
+  .hero-slider__slide {
+    min-height: auto;
+  }
+
+  .hero-slider__slide > .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 30px 20px 40px;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .hero-slider__media {
+    order: -1;
+  }
+
+  .hero-slider__media_img {
+    width: clamp(180px, 60vw, 320px);
+  }
+  .hero-slider__content {
+  
+    text-align: left
+  }
+  .hero-slider__heading {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .hero-slider__desc {
+    font-size: 16px;
+  }
+
+  /*
+     Gallery + Events (mobile)
+    */
+  .gallery-slider__arrow {
+    display: none;
+  }
+  .gallery-section__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .events-sidebar {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* 
+     Contact (mobile)
+      */
+  .contact-form__group,
+  .input-group--full {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-group {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 580px) {
+  /* Gallery: 1 item at <= 580px */
+  .gallery-slider {
+    --gallery-cols: 1;
+  }
+
+  /* Articles: single column at <= 580px */
+  .articles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .article {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .zigzag--media-left {
+    flex-direction: column;
+  }
+  .zigzag {
+    flex-direction: column;
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+  }
+  .zigzag--media-right {
+    flex-direction: column-reverse;
+  }
+
+  .zigzag + .zigzag {
+    margin-top: 20px;
+  }
+
+  .zigzag__media,
+  .zigzag__content {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .zigzag__media img {
+    height: auto;
+  }
+  .zigzag--media-right .zigzag__media img,
+  .zigzag--media-left .zigzag__media img {
+    clip-path: none;
+  }
+}
+
+@media (max-width: 370px) {
+  html,
+  body {
+    overflow-x: auto;
+  }
+
+  body {
+    min-width: 370px;
+  }
+}

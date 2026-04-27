@@ -1,0 +1,156 @@
+@media (min-width: 581px) and (max-width: 1024px) {
+  .hero-slider__arrow,
+  .gallery-slider__arrow {
+    display: none;
+  }
+
+  .gallery-slider {
+    --gallery-cols: 3;
+  }
+
+  .gallery-section__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-section__main {
+    width: 100%;
+  }
+
+  .events-sidebar {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Articles */
+  .articles {
+    justify-content: flex-start;
+  }
+
+  .article {
+    flex: 1 1 clamp(260px, 45%, 308px);
+    max-width: 308px;
+  }
+
+  /* Zigzag */
+  .zigzag {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Hide "Home Page" + Reebok partnership banner */
+  .hero__banner {
+    display: none;
+  }
+
+  .site-header__inner {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: auto;
+    gap: 6px;
+    padding: 8px 20px;
+  }
+
+  .site-header__logo-group {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .site-header__actions {
+    width: 100%;
+    gap: 0;
+  }
+
+  .site-header__actions .btn--ghost {
+    flex: 1 1 0;
+    width: auto;
+    max-width: none;
+    height: 42px;
+    clip-path: none;
+    -webkit-clip-path: none;
+  }
+
+  .site-header__actions .btn--membership {
+    border-right: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .nav-toggle {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    z-index: 1001;
+  }
+
+  .primary-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 999;
+    display: none;
+    overflow-y: auto;
+    background-color: var(--clr-nav);
+    height: 100vh;
+  }
+
+  .primary-nav.is-open {
+    display: block;
+  }
+
+  .primary-nav__inner {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 16px 20px 24px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .primary-nav__search {
+    order: -1;
+    width: 100%;
+    max-width: none;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 12px 14px;
+  }
+
+  .primary-nav__list {
+    flex-direction: column;
+    height: auto;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .primary-nav__item {
+    display: block;
+    width: fit-content;
+    height: auto;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .primary-nav__link {
+    display: inline-flex;
+    padding: 10px 20px;
+    font-family: var(--font-secondary);
+    letter-spacing: 0.4px;
+  }
+
+  .primary-nav__link:hover {
+    background-color: transparent;
+    clip-path: none;
+  }
+
+  .primary-nav__item:hover {
+    background-color: var(--clr-home);
+    clip-path:var(--clip-zigzag-l);
+  }
+}
