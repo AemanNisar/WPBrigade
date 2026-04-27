@@ -1,4 +1,4 @@
-import { getEl } from "./utils.js";
+import { getEl } from "../lib/utils.js";
 
 export function initAnnouncementBar() {
   const announcementBar = getEl(".announcement-bar");

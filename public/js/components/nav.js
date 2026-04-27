@@ -1,4 +1,4 @@
-import { getEl } from "./utils.js";
+import { getEl } from "../lib/utils.js";
 
 export function initNav() {
   const navToggle = getEl(".nav-toggle") || getEl(".nav_toggle");

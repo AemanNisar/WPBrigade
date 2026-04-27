@@ -1,11 +1,11 @@
-import { initCountryState } from "./countryState.js";
-import { initSiteSearch } from "./search.js";
-import { initContactForm } from "./contact.js";
-import { initVideoModal } from "./modal.js";
-import { initHeroSlider } from "./heroSlider.js";
-import { initGallerySlider } from "./gallerySlider.js";
-import { initNav } from "./nav.js";
-import { initAnnouncementBar } from "./announcement.js";
+import { initCountryState } from "./features/countryState.js";
+import { initSiteSearch } from "./features/search.js";
+import { initContactForm } from "./features/contact.js";
+import { initVideoModal } from "./components/modal.js";
+import { initHeroSlider } from "./components/heroSlider.js";
+import { initGallerySlider } from "./components/gallerySlider.js";
+import { initNav } from "./components/nav.js";
+import { initAnnouncementBar } from "./components/announcement.js";
 
 window.addEventListener("load", () => {
   initSiteSearch();

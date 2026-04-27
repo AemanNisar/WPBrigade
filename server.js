@@ -1,6 +1,6 @@
 import express from "express";
-import statesRoute from "./routes/states.js"
-import contactRoute from "./routes/contact.js";
+import statesRoute from "./src/routes/states.js";
+import contactRoute from "./src/routes/contact.js";
 const app=express()
 const PORT=process.env.PORT ||3000;
 
