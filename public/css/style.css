@@ -802,10 +802,18 @@ mark {
 }
 
 .zigzag__desc {
-  font-family: Roboto;
   font-size: var(--text-xs);
   margin-top: var(--space-sm);
+  color: var(--clr-text-body);
+
 }
+
+
+
+
+
+
+
 
 /*  5j. EVENTS SIDEBAR */
 .events-sidebar {
@@ -868,7 +876,6 @@ mark {
 
 .events-sidebar__location {
   color: var(--clr-text-muted);
-  font-family: "Roboto";
   font-size: var(--text-sm);
 }
 
