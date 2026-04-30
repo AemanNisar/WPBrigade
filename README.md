@@ -32,7 +32,7 @@ Returns the list of states for a country key found in `data/states.json`.
 Example:
 
 ```bash
-curl "http://localhost:3000/states?country=Paskitan"
+curl "http://localhost:3000/states?country=Pakistan"
 ```
 
 ### `POST /contact`

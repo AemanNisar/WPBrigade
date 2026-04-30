@@ -29,6 +29,7 @@ export function initCountryState() {
         stateSelect.innerHTML = "<option>No states found</option>";
       }
     } catch (err) {
+      console.log("error is ",error)
       console.error("Frontend error:", err);
       stateSelect.innerHTML = "<option>Error loading</option>";
     } finally {

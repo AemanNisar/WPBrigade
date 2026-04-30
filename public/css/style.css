@@ -16,7 +16,7 @@
   --clr-text-body: rgba(255, 255, 255, 0.85);
 
   /* — Layout — */
-  --max-width: 1440px;
+  --max-width: 1900px;
   --padding-page: 80px;
   --padding-section: 20px 80px;
 
@@ -29,7 +29,7 @@
   --space-xs: 4px;
 
   /* — Typography Scale — */
-  --font-primary: "Oswald", sans-serif;
+  --font-primary: "Oswald",'Arial Narrow';
   --font-secondary: "Source Sans 3", sans-serif;
 
   --text-xs: 14px;
@@ -56,11 +56,13 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  
   padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif */
 }
 
 body {
@@ -143,8 +145,8 @@ mark {
 /*  CONTAINER*/
 .container {
   width: 100%;
+  max-width: 1900px;
   margin: 0 auto;
-  max-width: 1120px;
   padding-inline: clamp(16px, 3.5vw, 80px);
 }
 
@@ -758,8 +760,6 @@ mark {
 .zigzag {
   display: flex;
   background-color: var(--clr-home);
-  max-width: 825px;
-  max-height: 238px;
   margin-inline: auto;
 }
 
